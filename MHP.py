@@ -233,7 +233,8 @@ class MHP:
         f, axarr = plt.subplots(self.dim*2,1, sharex='col', 
                                 gridspec_kw = {'height_ratios':sum([[3,1] for i in range(self.dim)],[])}, 
                                 figsize=(8,self.dim*2))
-        xs = np.linspace(0, horizon, (horizon/100.)*1000)
+
+        xs = np.linspace(0, horizon, (int)((horizon/100.)*1000))
         for i in range(self.dim):
             row = i * 2
 
